@@ -1,0 +1,321 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\roomDetails.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\roomDetails.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\MapManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\MapManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Nicholas\\Documents\\Programming\\Gothic Swine\\mystery_game.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\BinarySearchTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\BinarySearchTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\BinarySearchTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\BinarySearchTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\PlayerCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\PlayerCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\PlayerCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\PlayerCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Char.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\Char.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Room.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\Room.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\Room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\NPC.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\NPC.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\NPC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\NPC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\MapManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{41DF7682-A72B-4F9D-9149-A34EFED826B5}|GothicSwine\\GothicSwine.vcxproj|solutionrelative:GothicSwine\\MapManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "roomDetails.txt",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\roomDetails.txt",
+              "RelativeDocumentMoniker": "GothicSwine\\roomDetails.txt",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\roomDetails.txt",
+              "RelativeToolTip": "GothicSwine\\roomDetails.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAADLAgAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-10T03:18:39.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerCharacter.h",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\PlayerCharacter.h",
+              "RelativeDocumentMoniker": "GothicSwine\\PlayerCharacter.h",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\PlayerCharacter.h",
+              "RelativeToolTip": "GothicSwine\\PlayerCharacter.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T05:36:01.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerCharacter.cpp",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\PlayerCharacter.cpp",
+              "RelativeDocumentMoniker": "GothicSwine\\PlayerCharacter.cpp",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\PlayerCharacter.cpp",
+              "RelativeToolTip": "GothicSwine\\PlayerCharacter.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T06:24:53.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Item.h",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Item.h",
+              "RelativeDocumentMoniker": "GothicSwine\\Item.h",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Item.h",
+              "RelativeToolTip": "GothicSwine\\Item.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-01T22:39:56.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Item.cpp",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Item.cpp",
+              "RelativeDocumentMoniker": "GothicSwine\\Item.cpp",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Item.cpp",
+              "RelativeToolTip": "GothicSwine\\Item.cpp",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T23:01:06.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Char.h",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Char.h",
+              "RelativeDocumentMoniker": "GothicSwine\\Char.h",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Char.h",
+              "RelativeToolTip": "GothicSwine\\Char.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-31T04:24:21.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MapManager.h",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\MapManager.h",
+              "RelativeDocumentMoniker": "GothicSwine\\MapManager.h",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\MapManager.h",
+              "RelativeToolTip": "GothicSwine\\MapManager.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-30T02:01:38.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MapManager.cpp",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\MapManager.cpp",
+              "RelativeDocumentMoniker": "GothicSwine\\MapManager.cpp",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\MapManager.cpp",
+              "RelativeToolTip": "GothicSwine\\MapManager.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-30T02:05:23.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NPC.h",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\NPC.h",
+              "RelativeDocumentMoniker": "GothicSwine\\NPC.h",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\NPC.h",
+              "RelativeToolTip": "GothicSwine\\NPC.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-30T01:43:01.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NPC.cpp",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\NPC.cpp",
+              "RelativeDocumentMoniker": "GothicSwine\\NPC.cpp",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\NPC.cpp",
+              "RelativeToolTip": "GothicSwine\\NPC.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-30T01:25:17.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Room.h",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Room.h",
+              "RelativeDocumentMoniker": "GothicSwine\\Room.h",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Room.h",
+              "RelativeToolTip": "GothicSwine\\Room.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-27T00:48:30.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Room.cpp",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Room.cpp",
+              "RelativeDocumentMoniker": "GothicSwine\\Room.cpp",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\Room.cpp",
+              "RelativeToolTip": "GothicSwine\\Room.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-30T01:24:49.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\main.cpp",
+              "RelativeDocumentMoniker": "GothicSwine\\main.cpp",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\main.cpp",
+              "RelativeToolTip": "GothicSwine\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-14T04:25:11.298Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "f17bf510-87ba-46e5-b791-b2cbab2f0dc1",
+        "Display": 2,
+        "X": 103,
+        "Y": 153,
+        "Width": 1578,
+        "Height": 792,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "mystery_game.py",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\Programming\\Gothic Swine\\mystery_game.py",
+              "RelativeDocumentMoniker": "..\\..\\..\\Programming\\Gothic Swine\\mystery_game.py",
+              "ToolTip": "D:\\Nicholas\\Documents\\Programming\\Gothic Swine\\mystery_game.py",
+              "RelativeToolTip": "..\\..\\..\\Programming\\Gothic Swine\\mystery_game.py",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAAAOsAAACIAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-05-26T03:33:02.594Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "60b29dce-e2a4-4603-a35c-84129b78d17c",
+        "Display": 2,
+        "X": -27,
+        "Y": 130,
+        "Width": 1578,
+        "Height": 792,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BinarySearchTree.h",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\BinarySearchTree.h",
+              "RelativeDocumentMoniker": "GothicSwine\\BinarySearchTree.h",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\BinarySearchTree.h",
+              "RelativeToolTip": "GothicSwine\\BinarySearchTree.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T03:26:08.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BinarySearchTree.cpp",
+              "DocumentMoniker": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\BinarySearchTree.cpp",
+              "RelativeDocumentMoniker": "GothicSwine\\BinarySearchTree.cpp",
+              "ToolTip": "D:\\Nicholas\\Documents\\School\\CS 499 Computer Science Capstone\\GothicSwine\\GothicSwine\\BinarySearchTree.cpp",
+              "RelativeToolTip": "GothicSwine\\BinarySearchTree.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T03:30:47.328Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
