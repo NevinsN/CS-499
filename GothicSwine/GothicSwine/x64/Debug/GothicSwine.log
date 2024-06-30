@@ -1,6 +1,0 @@
-﻿  RoomManager.cpp
-D:\Nicholas\Documents\School\CS 499 Computer Science Capstone\GothicSwine\GothicSwine\RoomManager.cpp(153,13): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  main.cpp
-D:\Nicholas\Documents\School\CS 499 Computer Science Capstone\GothicSwine\GothicSwine\main.cpp(20,17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-  GothicSwine.vcxproj -> D:\Nicholas\Documents\School\CS 499 Computer Science Capstone\GothicSwine\x64\Debug\GothicSwine.exe
