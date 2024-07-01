@@ -2,7 +2,23 @@
 from pymongo import MongoClient
 
 class DBAccess(object):
-    """ CRUD operations for Gothic Swine in MongoDB """
+    '''
+    A class for the attempt to solve dialog box
+
+    Parameters:
+        collection (string): String to determine whiche collection to access
+        adminLogin (bool): Determines if user has admin privledges or not
+
+    Attributes:
+        messageBox (QDialog): MessageBox object for display
+        suspectSelection (string): holds the name of the suspect currently selected in radio buttons
+        layout (QVBoxLayout): Main layout
+        textLabel (QLabel): Holds the prompt for display
+        selectorLayout (OVBoxLayout): Layout for radio buttons
+        buttonLayout (QHBoxLayout): Layout for selection buttons
+        solveButton (QPushButton): Button to attempt ot solve
+        cancelButton (QPushButton): Button to cancel attempt
+    '''
 
     def __init__(self, collection, adminLogin):
         # Initializing the MongoClient. This is hardwired to access the database
@@ -17,6 +33,7 @@ class DBAccess(object):
         #
         DB = "GothicSwineAssets"
         COL = collection
+        
         #
         # Initialize Connection
         #
@@ -28,7 +45,7 @@ class DBAccess(object):
         self.collection = self.database[COL]
         #print("MongoDB database connected")
 
-    # Complete this create method to implement the C in CRUD.
+    # Method to implement the C in CRUD.
     def create(self, data):
         if data: 
             self.collection.insert_one(data)  # data should be dictionary            
@@ -37,7 +54,7 @@ class DBAccess(object):
             raise Exception("Nothing to save, because data parameter is empty")
             return False
 
-    # Create method to implement the R in CRUD.
+    # Method to implement the R in CRUD.
     def read(self, data):
         if data:
             result = self.collection.find(data)
@@ -46,7 +63,7 @@ class DBAccess(object):
             result = self.collection.find({})
             return list(result)
             
-    # Create method to implement the U in CRUD
+    # Method to implement the U in CRUD
     def update(self, data, updateData):
         if data and updateData:
             result = self.collection.update_many(data, {"$set": updateData})
@@ -54,7 +71,7 @@ class DBAccess(object):
         else:
             return set()
             
-    # Create method to implement the D in CRUD
+    # Method to implement the D in CRUD
     def delete(self, data):
         if data:
             result = self.collection.delete_many(data)
@@ -62,6 +79,7 @@ class DBAccess(object):
         else:
             return set()
         
+    # Method to get a random document from collection
     def getRandomSamplingOfValue(self, data):
         if data:
             result = self.collection.aggregate(data)
@@ -70,6 +88,7 @@ class DBAccess(object):
             result = self.collection.find({})
             return list(result)
         
+    # Method to close database connection
     def closeConnection(self):
         self.cluster.close()
 

@@ -1,22 +1,37 @@
 import random
 
+'''
+    A classless one-off module to handle hints generation
+
+    Parameters:
+        NPC (NPC): Character to examine for hints 
+
+    Attributes:
+        apparel (Item): NPC's apparel
+        accessory (Item): NPC's accessory
+        flair (Item): NPC's flair
+        hints (List): Holds all hints
+        villainHints (List): Holds lies told by the villain
+        itemHolder (List): Holds the items in a dicitionary format
+    ''' 
+
 def generateAndReturnHints(NPC):
+    # Initialize variables
     apparel = NPC.getApparel()
     accessory = NPC.getAccessory()
     flair = NPC.getFlair()
-
     hints = []
     villainHints = []
-    itemHolder = []
-
     itemHolder = [{apparel: []}, {accessory: []}, {flair: []}]
 
+    # Sets values for itemHolda
     for dictionary in itemHolder:
         for item, qualities in dictionary.items():
             qualities.append(item.getColor())
             qualities.append(item.getDesign())
             qualities.append(item.getBaseItem())
 
+    # Initializes all the hints for non-villain characters with string formatting
     randNum = returnRandNum(3)
     hints.append("I could swear I saw the fiend with a {color} {baseItem}!".format(color = list(itemHolder[randNum].values())[0][0], baseItem = list(itemHolder[randNum].values())[0][2]))
     
@@ -71,7 +86,7 @@ def generateAndReturnHints(NPC):
         itemTwo = getRandomBaseItem(False, NPC)
     hints.append("Surely a great detective like you doesn't need me to tell you about the {} {} I saw? I'm sure I'm too smart to be wrong".format(itemOne, itemTwo))
 
-    '''These are the statements for the villain. All should be lies.'''
+    #These are the statements for the villain. All should be lies.
     villainHints.append("I could swear I saw the fiend with a {color} {baseItem}!".format(color = getRandomColor(True, NPC), baseItem = getRandomBaseItem(True, NPC)))
     
     villainHints.append("I'm pretty sure the murderer was sporting some {}.".format(getRandomDesign(True, NPC)))
@@ -99,6 +114,11 @@ def generateAndReturnHints(NPC):
     return [hints, villainHints]
 
 def returnTwoChoicesByInt(itemHolder, indexNum, isVillain, villain):
+    '''
+    Method to return one true item and one random item. 
+    It checks to ensure they are different, and shuffles them
+    so the true item in the hint is not always in the same position
+    '''
     randNum = returnRandNum(3)
     if returnRandNum(2) == 0:
         one = list(itemHolder[randNum].values())[0][indexNum]
@@ -134,9 +154,19 @@ def returnTwoChoicesByInt(itemHolder, indexNum, isVillain, villain):
     return [one, two]
 
 def returnRandNum(numChoices):
+    '''
+    Method to return random number in a range
+    numChoices is the total number of choices. It subtracts 1 for use as an index
+    '''
     return random.randint(0, numChoices - 1)
 
 def getRandomColor(isVillain, villain):
+    '''
+    Method to return a random color from list
+        isVillain tells if this is being generated for the villain
+        villain is an NPC object to grab items
+        Villain will not select own color
+    '''
     color = [
             "black",
             "blue",
@@ -169,6 +199,12 @@ def getRandomColor(isVillain, villain):
     return random.choice(color)
 
 def getRandomDesign(isVillain, villain):
+    '''
+    Method to return a random design from list
+        isVillain tells if this is being generated for the villain
+        villain is an NPC object to grab items
+        Villain will not select own design
+    '''
     design = [
         "floral",
         "houndstooth",
@@ -201,6 +237,12 @@ def getRandomDesign(isVillain, villain):
     return random.choice(design)
 
 def getRandomBaseItem(isVillain, villain):
+    '''
+    Method to return a random baseItem from list
+        isVillain tells if this is being generated for the villain
+        villain is an NPC object to grab items
+        Villain will not select own baseItem
+    '''
     baseItems = [
         "cardigan",	
         "bolo tie",	

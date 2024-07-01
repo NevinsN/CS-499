@@ -12,11 +12,11 @@ class StartMenu(QMainWindow):
     Attributes:
         layout (QVBoxLayout): The main layout for the window
         mainWindow (MainWindow): Instance of the MainWindow class for navigation
+        adminRights (Bool): Checks if user has admin rights
     '''
+    # Initialize class variable
     layout = QVBoxLayout()
-
-    mainWindow = MainWindow.MainWindow()
-
+    mainWindow = MainWindow.MainWindow() 
     adminRights = False
 
     def __init__(self):
@@ -28,25 +28,49 @@ class StartMenu(QMainWindow):
         
         # Removes frame from window
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
-        
+
+        # Set styles for app
+        self.setStyleSheet("QMainWindow {background-color: black}")
         self.layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.layout.setSpacing(25)
 
-        self.setStyleSheet("QMainWindow {background-color: black}")
-        
+        # Frame classes allow to show and hide layouts and keep the menu cleaner
         self.loginFrame = LoginFrame.LoginFrame(self)
-        self.startMenuFrame = StartMenuFrame.StartMenuFrame(self)
-
+        self.startMenuFrame = StartMenuFrame.StartMenuFrame(self, self.adminRights)
         self.layout.addWidget(self.loginFrame.getFrame())
         self.layout.addWidget(self.startMenuFrame.getFrame())
 
+
+        # sets cursor
         cursor = Qt.CursorShape.PointingHandCursor
         self.setCursor(cursor)
 
+        # widget for the app
         widget = QWidget()
         widget.setLayout(self.layout)
         self.setCentralWidget(widget)
-        self.showMaximized()       
+        self.showMaximized()     
+
+    def setAdminRights(self, adminRights):
+        '''
+        Setter for adminRights
+
+        '''
+        self.adminRights = adminRights
+
+    def getAdminRights(self):
+        '''
+        Getter for adminRights
+        '''
+        return self.adminRights
+    
+    def createAndShowStartMenuFrame(self):
+        '''
+        Method to create and switch to a start menut frame
+        '''
+        self.startMenuFrame.adminRights = self.adminRights
+        self.startMenuFrame.getFrame().show()
+
 
     def ReturnTitleButtonCSS(self):
          '''

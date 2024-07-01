@@ -16,12 +16,29 @@ class MainWindow(QMainWindow):
 
     Attributes:
         layout (QVBoxLayout): The main window layout
-        roomName (string): holds the name of the current room
-        roomDescription(string): holds the description of the current room
-        charactersInRoom (string list): holds the list of characters in the room
-        roomText (string): holds the text displayed in the gameplay label
+        submittedSuspect (bool): Detects if the submit button has been pressed
+        introText (string): Holds introduction text
+        map (MapManager): Manages all things map for the gameplay
+        currentRoom (Room): Stores the current room from map
+        player (PlayerCharacter): The object that controls the player character
+        roomNameLabel (QLabel): Label that show the room's name on the screen
+        gameplayLayout (QHBoxLayout): Holds the top two elements of the screen
+        mainScreenLayout (QGridLayout): Holds layout for the main game screen
+        goNorthButton (QPushButton): Button for going North
+        goWestButton (QPushButton): Button for going West
+        goEastButton (QPushButton): Button for going East
+        goSouthButton (QPushButton): Button for going South
+        gameplayLabel (QLabel): gameplayLabel presents the player with the information about the current room
+        background (QWidget): A background for menuLayout
+        menuLayout (QVBoxLayout): menuLayout holds menu buttons vertically
+        notepadButton (QPushButton): Button to display player's collected notes
+        examineNPCButton (QPushBUtton): Button to see what NPC is wearing
+        questionNPCButton (QPushButton): Button to get a hint from the NPC
+        solveButton (QPushButton): Button to attempt to solve the murder
+        quitButton (QPushButton): Button to quit the game
     '''
     layout = QVBoxLayout()
+    submittedSuspect = False
 
     introText = '''You're finally here! My name is Constable Eli. Late last night, the world-renowned singer Abigail Piper
                    was murdered at her own dinner party in her gothic manor house! She asked everyone to come in their 
@@ -38,23 +55,20 @@ class MainWindow(QMainWindow):
         '''
         super().__init__()
 
-        self.currentRoom = None
+        # Initialize class variables
+        self.map = MapManager.MapManager()
+        self.currentRoom = self.map.getCurrentRoom()
+        self.player = PC.PlayerCharacter()
         
         # removes window frame
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
         self.setWindowTitle("Gothic Swine")
 
+        # Sets style
         self.layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        
         self.setStyleSheet("QMainWindow {background-color: black}")
-        
-        self.map = MapManager.MapManager()
 
-        self.player = PC.PlayerCharacter()
-
-        self.currentRoom = self.map.getCurrentRoom()
-
-        # sets the needed label for the room title
+        # sets roomNameLabel and style
         self.roomNameLabel = QLabel(self.currentRoom.getRoomName())
         self.roomNameLabel.setStyleSheet("""QLabel {
                                     color: goldenrod;
@@ -64,15 +78,13 @@ class MainWindow(QMainWindow):
                                     }
                                     """)
         
-        # holds the top two elements of the screen 
+        # Initialize layouts 
         gameplayLayout = QHBoxLayout()
-
-        # holds layout for the main game screen
         mainScreenLayout = QGridLayout()
 
-        # button to handle going north
+        # goNorthButton Initialization and setup
         self.goNorthButton = QPushButton("Go North")
-        self.goNorthButton.setDisabled(True)
+        self.goNorthButton.setDisabled(True) # Begins disabled to be activated later if a room has a door in that direction
         self.goNorthButton.clicked.connect(self.goNorth)
         self.goNorthButton.setStyleSheet(self.ReturnScreenButtonCSS())
 
@@ -80,16 +92,15 @@ class MainWindow(QMainWindow):
         mainScreenLayout.addWidget(self.roomNameLabel, 0, 1, 1, 1, Qt.AlignmentFlag.AlignCenter)
         mainScreenLayout.addWidget(self.goNorthButton, 1, 1, 1, 1, Qt.AlignmentFlag.AlignCenter)
 
-        # button to handle going west
+        # goWestButton Initialization and setup
         self.goWestButton = QPushButton("Go West")
-        self.goWestButton.setDisabled(True)
+        self.goWestButton.setDisabled(True) # Begins disabled to be activated later if a room has a door in that direction
         self.goWestButton.clicked.connect(self.goWest)
         self.goWestButton.setStyleSheet(self.ReturnScreenButtonCSS())
 
+        # gameplayLabel Initialization and setup
         self.gameplayLabel = QLabel()
         self.buildRoomText()
-
-        # gameplayLabel presents the player with the information about the current room
         self.gameplayLabel.setStyleSheet("""QLabel {
                                     background-color: beige;
                                     color: black;
@@ -102,9 +113,9 @@ class MainWindow(QMainWindow):
         self.gameplayLabel.setWordWrap(True)
         self.gameplayLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # button to handle going east
+        # goEastButton Initialization and setup
         self.goEastButton = QPushButton("Go East")
-        self.goEastButton.setDisabled(True)
+        self.goEastButton.setDisabled(True) # Begins disabled to be activated later if a room has a door in that direction
         self.goEastButton.clicked.connect(self.goEast)
         self.goEastButton.setStyleSheet(self.ReturnScreenButtonCSS())
 
@@ -113,20 +124,22 @@ class MainWindow(QMainWindow):
         mainScreenLayout.addWidget(self.gameplayLabel, 2, 1, 1, 1, Qt.AlignmentFlag.AlignCenter)
         mainScreenLayout.addWidget(self.goEastButton, 2, 2, 1, 1, Qt.AlignmentFlag.AlignCenter)
 
-        # button to handle going south
+        # goSouthButton Initialization and setup
         self.goSouthButton = QPushButton("Go South")
-        self.goSouthButton.setDisabled(True)
+        self.goSouthButton.setDisabled(True) # Begins disabled to be activated later if a room has a door in that direction
         self.goSouthButton.clicked.connect(self.goSouth)
         self.goSouthButton.setStyleSheet(self.ReturnScreenButtonCSS())
 
         # add goSouthButton to layout
         mainScreenLayout.addWidget(self.goSouthButton, 3, 1, 1, 1, Qt.AlignmentFlag.AlignCenter)
-
+        
+        # Initializes direction button disabled status
         self.initRoomButtons()
 
-        # adds mainScreenLayout to gamePlayLayout
+        # Adds mainScreenLayout to gamePlayLayout
         gameplayLayout.addLayout(mainScreenLayout)
 
+        # Initialize background
         background = QWidget()
         background.setStyleSheet("""QWidget {
                                  background-color: beige;
@@ -136,34 +149,38 @@ class MainWindow(QMainWindow):
                                  }
                                  """)
         
-
-        # menuLayout holds menu buttons vertically
+        # Initializes menuLayout
         menuLayout = QVBoxLayout(background)
         menuLayout.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # menu button logic
+        # Initialize and setup notepadButton
         self.notepadButton = QPushButton("Notes")
         self.notepadButton.clicked.connect(self.checkNotepad)
         self.notepadButton.setStyleSheet(self.ReturnScreenButtonCSS())
         self.notepadButton.setDisabled(True)
 
+        # Initialize and setup examineNPCButton
         examineNPCButton = QPushButton("Examine Person")
         examineNPCButton.clicked.connect(self.examineCharacterInRoom)
         examineNPCButton.setStyleSheet(self.ReturnScreenButtonCSS())
 
+        # Initialize and setup questionNPCButton
         questionNPCButton = QPushButton("Question Person")
         questionNPCButton.clicked.connect(self.questionCharacter)
         questionNPCButton.setStyleSheet(self.ReturnScreenButtonCSS())
 
+        # Initialize and setup solveButton
         self.solveButton = QPushButton("Attempt to Solve")
         self.solveButton.clicked.connect(self.attemptToSolveGame)
         self.solveButton.setStyleSheet(self.ReturnScreenButtonCSS())
         self.solveButton.setDisabled(True)
 
+        # Initialize and setup quitButton
         quitButton = QPushButton("Quit")
         quitButton.clicked.connect(sys.exit)
         quitButton.setStyleSheet(self.ReturnScreenButtonCSS())
 
+        # Add Buttons to menuLayout
         menuLayout.addWidget(self.notepadButton)
         menuLayout.addWidget(examineNPCButton)
         menuLayout.addWidget(questionNPCButton)
@@ -176,6 +193,7 @@ class MainWindow(QMainWindow):
         cursor = Qt.CursorShape.PointingHandCursor
         self.setCursor(cursor)
 
+        # Prints a commandline map for debugging
         mapDisplay = MapDisplay.MapDisplayFrame(self.map.map)
         mapFrame = mapDisplay.getFrame()
 
@@ -188,11 +206,11 @@ class MainWindow(QMainWindow):
         widget.setLayout(self.layout)
         self.setCentralWidget(widget)
 
-    def setAdminRights(self, adminRights):
-        self.adminRights = adminRights
+    def setSubmittedSuspect(self, submittedSuspect):
+        self.submittedSuspect - submittedSuspect
 
-    def getAdminRights(self):
-        return self.adminRights
+    def getSubmittedSuspect(self):
+        return self.submittedSuspect
 
     def ReturnScreenButtonCSS(self):
         '''
@@ -218,26 +236,37 @@ class MainWindow(QMainWindow):
          '''
          Method to build the text for the gameplayLabel
          '''
+         # Sets roomNameLabel with currRoom's roomName
          self.roomNameLabel.setText(self.currentRoom.getRoomName())
-         textToReturn = self.currentRoom.getRoomDescription()
-         textToReturn += "\n\nOther people in the room: "
-         for char in self.currentRoom.getCharactersInRoom():
+         
+         # textToReturn is a running string that will fill gameplayLabel
+         textToReturn = self.currentRoom.getRoomDescription() # Pulls description
+         textToReturn += "\n\nOther people in the room: "     
+         for char in self.currentRoom.getCharactersInRoom():  # Goes through all characters and adds their name to string
              textToReturn += char.getCharacterName()
-
+ 
+         # Sets gameplayLabel
          self.gameplayLabel.setText(textToReturn)
     
     def initRoomButtons(self): 
+        '''
+        Method to initialize the direction buttons
+        '''
+        # Begins by disabling all four buttons
         self.goSouthButton.setDisabled(True)
         self.goNorthButton.setDisabled(True)
         self.goEastButton.setDisabled(True)
         self.goWestButton.setDisabled(True)
    
+        # Gets dictionary from connectedRooms from currentRoom
+        # Iterates through dictionary with key (direction) and value (room)
         for direction, room in self.currentRoom.getConnectedRooms().items():
-            if room == ["Invalid Location"]:
-                continue
-            elif room == [None]:
-                continue
-            else:
+            if room == ["Invalid Location"]: # "Invalid Location" means it's outside the map grid
+                continue # Nothing occurs and it moves to next connection
+            elif room == [None]:             # Room of type None means that there is no room at that connection
+                continue # Nothing occurs and it moves to next connection
+            else:                            # A valid Room item is found
+                # Match statement looks at direction, and sets the proper button to enabled
                 match direction:
                     case 'North':
                         self.goNorthButton.setDisabled(False)
@@ -249,73 +278,115 @@ class MainWindow(QMainWindow):
                         self.goWestButton.setDisabled(False)                      
 
     def goNorth(self):
-        self.map.moveNorth()
+        '''
+        Method to move the player north
+        '''
+        self.map.moveNorth() 
         self.currentRoom = self.map.getCurrentRoom()
         
+        # Resets room text and button values
         self.buildRoomText()
         self.initRoomButtons()
 
+        # solveButton is only valid in the foyer, where the constable is. 
+        # This ensures it is only active when in the foyer
         if self.currentRoom.getRoomName() == 'Foyer':
             self.solveButton.setDisabled(False)
         else:
             self.solveButton.setDisabled(True)
 
+        # Console output for movement
         print("Moved to the " + str(self.currentRoom.getRoomName()))
 
     def goEast(self):
+        '''
+        Method to move the player east
+        '''
         self.map.moveEast()
         self.currentRoom = self.map.getCurrentRoom()
 
+        # Resets room text and button values
         self.buildRoomText()
         self.initRoomButtons()
 
+        # solveButton is only valid in the foyer, where the constable is. 
+        # This ensures it is only active when in the foyer
         if self.currentRoom.getRoomName() == 'Foyer':
             self.solveButton.setDisabled(False)
         else:
             self.solveButton.setDisabled(True)
         
+        # Console output for movement
         print("Moved to the " + str(self.currentRoom.getRoomName()))
 
     def goSouth(self):
+        '''
+        Method to move the player south
+        '''
         self.map.moveSouth()
         self.currentRoom = self.map.getCurrentRoom()
 
+        # Resets room text and button values
         self.buildRoomText()
         self.initRoomButtons()
 
+        # solveButton is only valid in the foyer, where the constable is. 
+        # This ensures it is only active when in the foyer
         if self.currentRoom.getRoomName() == 'Foyer':
             self.solveButton.setDisabled(False)
         else:
             self.solveButton.setDisabled(True)
         
+        # Console output for movement
         print("Moved to the " + str(self.currentRoom.getRoomName()))
 
     def goWest(self):
+        '''
+        Method to move the player west
+        '''
         self.map.moveWest()
         self.currentRoom = self.map.getCurrentRoom()
 
+        # Resets room text and button values
         self.buildRoomText()
         self.initRoomButtons()
 
+        # solveButton is only valid in the foyer, where the constable is. 
+        # This ensures it is only active when in the foyer
         if self.currentRoom.getRoomName() == 'Foyer':
             self.solveButton.setDisabled(False)
         else:
             self.solveButton.setDisabled(True)
         
+        # Console output for movement
         print("Moved to the " + str(self.currentRoom.getRoomName()))
 
     def examineCharacterInRoom(self):
+        '''
+        Method to examine a character. 
+        dialogBox is called and the present character is passed to populate text
+        '''
         dialogBox = DiBx.DialogBox(self.player.examineCharacter(self.currentRoom.getCharactersInRoom()[0]))
         dialogBox.executeMessageBox()
 
     def questionCharacter(self):
+        '''
+        Method to question a character. 
+        dialogBox is called and the present character is passed to populate text
+        player questionCharacter(NPC) method is then called
+        '''
         dialogBox = DiBx.DialogBox(self.currentRoom.getCharactersInRoom()[0].getHintToGive())
         self.player.questionCharacter(self.currentRoom.getCharactersInRoom()[0])
         dialogBox.executeMessageBox()
 
         self.notepadButton.setDisabled(False)
 
-    def checkNotepad(self):        
+    def checkNotepad(self): 
+        '''
+        Method to check the notepad. 
+        notepad string is constructed from player.getNotes(),
+        dialogBox is called and the notes are printed
+        '''       
         notes = self.player.getNotes()
         notepadString = ''
         for charNPC, hint in notes.items():
@@ -325,18 +396,29 @@ class MainWindow(QMainWindow):
         dialogBox.executeMessageBox()
 
     def attemptToSolveGame(self):
-        slvBox = SolvBx.SolveDialogBox(self.map.NPCList)
+        '''
+        Method to solve game. 
+        dialogBox is called and winLoss is called and populated with the player's guess
+        '''
+        slvBox = SolvBx.SolveDialogBox(self ,self.map.NPCList)
         slvBox.executeMessageBox()
-        playerAccusation = slvBox.getSuspectSelection()
-        slvBox.closeWindow()
-        if playerAccusation == self.map.getVillain().getCharacterName():
-            print("You won!")
-            winLoss = WinLoss.WinLossScreen(self, True, playerAccusation)
+        
+        print(self.submittedSuspect)
 
-        else:
-            print("You lost!")
-            winLoss = WinLoss.WinLossScreen(self, False, playerAccusation)
+        if self.getSubmittedSuspect():
+            playerAccusation = slvBox.getSuspectSelection()
+            slvBox.closeWindow()
+            if playerAccusation == self.map.getVillain().getCharacterName():
+                print("You won!")
+                winLoss = WinLoss.WinLossScreen(self, True, playerAccusation)
+
+            else:
+                print("You lost!")
+                winLoss = WinLoss.WinLossScreen(self, False, playerAccusation)
 
     def runIntroDB(self):
+        '''
+        Method to play the intro dialog box
+        '''
         introDB = DiBx.DialogBox(self.introText)
         introDB.executeMessageBox()

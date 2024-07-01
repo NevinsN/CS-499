@@ -6,12 +6,20 @@ import sys
 import Database.CreateDBItems as CreateDBItems
 
 class StartMenuFrame(object):
-    def __init__(self, parent):
-        self.frame = QFrame()
+    '''
+    Class that handles the initial start menu
 
+    Attributes:
+        frame(QFrame): A frame to hold the layouts and enable showing/hiding
+        parent(QMainWindow): The parent widget
+        layout (QVBoxLayout): The main layout for the window
+    '''
+    def __init__(self, parent, adminRights):
+        # Initialize class variables
+        self.frame = QFrame()                
         self.parent = parent
-
-        layout = QVBoxLayout()
+        self.adminRights = adminRights 
+        layout = QVBoxLayout()               
 
         # Game title object
         titleLabel = QLabel("Gothic Swine", self.frame)
@@ -21,42 +29,55 @@ class StartMenuFrame(object):
         # Logic for all the buttons
         buttonLayout = QHBoxLayout()
 
+        # Button to start the game
         startButton = QPushButton("Start Game")
         startButton.clicked.connect(self.startGame)
         startButton.setStyleSheet(self.ReturnTitleButtonCSS())
         
+        # Button to quit the game
         exitButton = QPushButton("Quit")
         exitButton.clicked.connect(sys.exit)
         exitButton.setStyleSheet(self.ReturnTitleButtonCSS())
 
-        updateItemsButton = QPushButton("Update Items")
-        updateItemsButton.clicked.connect(self.updateItemsDatabase)
-        updateItemsButton.setStyleSheet(self.ReturnTitleButtonCSS())
-
+        # Sets button to buttoLayout
         buttonLayout.addWidget(startButton)
         buttonLayout.addWidget(exitButton)
 
-        if self.parent.adminRights:
+        # Conditional button based on adminRights.
+        # Disabled by default, since it can mess up the database 
+        # and takes a fair bit of time to run.
+        # A later, more final version will likely have it enable by default
+        if adminRights:
+            updateItemsButton = QPushButton("Update Items")
+            updateItemsButton.clicked.connect(self.updateItemsDatabase)
+            updateItemsButton.setStyleSheet(self.ReturnTitleButtonCSS())
+            updateItemsButton.setDisabled(True)
             buttonLayout.addWidget(updateItemsButton)
 
+        # Finalize layout
         layout.addWidget(titleLabel)
         layout.addLayout(buttonLayout)
         self.frame.setLayout(layout)
 
+        # Show frame
         self.frame.hide()
 
-    def setAdminRights(self, adminRights):
-        self.adminRights = adminRights
-
-    def getAdminRights(self):
-        return self.adminRights
+    def getParent(self):
+        '''
+        Getter for parent
+        '''
+        return self.parent
     
     def getFrame(self):
+        '''
+        Getter for frame
+        '''
         return self.frame
 
     def startGame(self):
         '''
         Method to start the game, opening MainWindow and closing this one
+        Calls to parent to do so
         '''
         self.parent.mainWindow.showMaximized()
         self.parent.mainWindow.runIntroDB()
@@ -76,7 +97,15 @@ class StartMenuFrame(object):
                 font-weight: bold; 
                 font-size: 24pt; 
                 border: 2px solid goldenrod; 
-                border-radius: 27px}"""
+                border-radius: 27px}
+                
+                QPushButton:disabled {
+                color: gray;
+                }"""
     
     def updateItemsDatabase(self):
+        '''
+        Method to update the items database
+        Hardcoded for now, but will be made more dynamic eventually
+        '''
         dbInit = CreateDBItems.CreateDBItems("Data/gothicSwineDataItems.csv")

@@ -1,73 +1,73 @@
 ('D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
- 'Capstone\\GothicSwine\\GothicSwinePython\\build\\GothicSwine\\PYZ-00.pyz',
+ 'Capstone\\Capstone\\GothicSwinePython\\build\\GothicSwine\\PYZ-00.pyz',
  [('Assets', '-', 'PYMODULE'),
   ('Assets.Item',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Assets\\Item.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Assets\\Item.py',
    'PYMODULE'),
   ('Assets.MapManager',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Assets\\MapManager.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Assets\\MapManager.py',
    'PYMODULE'),
   ('Assets.NPC',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Assets\\NPC.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Assets\\NPC.py',
    'PYMODULE'),
   ('Assets.PlayerCharacter',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Assets\\PlayerCharacter.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Assets\\PlayerCharacter.py',
    'PYMODULE'),
   ('Assets.Room',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Assets\\Room.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Assets\\Room.py',
    'PYMODULE'),
   ('Data', '-', 'PYMODULE'),
   ('Data.Hints',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Data\\Hints.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Data\\Hints.py',
    'PYMODULE'),
   ('Database', '-', 'PYMODULE'),
   ('Database.CreateDBItems',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Database\\CreateDBItems.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Database\\CreateDBItems.py',
    'PYMODULE'),
   ('Database.DBAccess',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\Database\\DBAccess.py',
+   'Capstone\\Capstone\\GothicSwinePython\\Database\\DBAccess.py',
    'PYMODULE'),
   ('GameScreens', '-', 'PYMODULE'),
   ('GameScreens.Components', '-', 'PYMODULE'),
   ('GameScreens.Components.DialogBox',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\Components\\DialogBox.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\Components\\DialogBox.py',
    'PYMODULE'),
   ('GameScreens.Components.LoginFrame',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\Components\\LoginFrame.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\Components\\LoginFrame.py',
    'PYMODULE'),
   ('GameScreens.Components.MapDisplayFrame',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\Components\\MapDisplayFrame.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\Components\\MapDisplayFrame.py',
    'PYMODULE'),
   ('GameScreens.Components.SolveDialogBox',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\Components\\SolveDialogBox.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\Components\\SolveDialogBox.py',
    'PYMODULE'),
   ('GameScreens.Components.StartMenuFrame',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\Components\\StartMenuFrame.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\Components\\StartMenuFrame.py',
    'PYMODULE'),
   ('GameScreens.Components.WinLossScreen',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\Components\\WinLossScreen.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\Components\\WinLossScreen.py',
    'PYMODULE'),
   ('GameScreens.MainWindow',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\MainWindow.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\MainWindow.py',
    'PYMODULE'),
   ('GameScreens.StartMenu',
    'D:\\Nicholas\\Documents\\School\\CS 499 Computer Science '
-   'Capstone\\GothicSwine\\GothicSwinePython\\GameScreens\\StartMenu.py',
+   'Capstone\\Capstone\\GothicSwinePython\\GameScreens\\StartMenu.py',
    'PYMODULE'),
   ('PyQt6',
    'C:\\Users\\TGNiklaus\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyQt6\\__init__.py',
